@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chameleon Shop</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <menu>
+                    <li id="logo" onclick="toggleMenu()">
+                        <img src="./favicon.png" alt="Logo Chameleon Shop">
+                    </li>
+                    <li id="search">
+                        <input type="search" name="search" placeholder="Pesquisar">
+                        <img src="./assets/icons/search.png" alt="search">
+                    </li>
+                    <li id="account">
+                        <a href="#">
+                            <img src="./assets/icons/people-circle.svg" alt="account">
+                        </a>
+                    </li>
+                </menu>
+            </nav>
+            <menu id="menu" class="activated">
+                <p id="menuInfo" onclick="toggleMenu()">MENU</p>
+            </menu>
+        </header>
+        <main>
+
+        </main>
+    </div>
+
+    <script>
+        const $logo = document.querySelector("#logo");
+        const $menu = document.querySelector("#menu");
+        const $menuInfo = document.querySelector("#menuInfo");
+        const toggleMenu = () => {
+            $menu.classList.toggle("activated");
+            $menuInfo.classList.toggle("activated");
+        };
+    </script>
+</body>
+</html>

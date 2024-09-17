@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+    cursor: default;
+}
+
+:root {
+    --background: #eee;
+    --primary: rgb(133,188,193);
+    --green: rgb(154,186,145);
+    --pink: rgb(255, 175, 184);
+    --purple: rgb(183,190,216); 
+    --beige: rgb(245,229,216);
+    --orange: rgb(236,193,176);
+    --shadow: 0 10px 10px #1d1d1d1c;
+
+    --headerSize: 70px;
+}
+
+.container {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--background);
+}
+
+header {
+    position: relative;
+    width: 100dvw;
+    height: var(--headerSize);
+    background-color: var(--primary);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 50dvw;
+    height: 30px;
+    bottom: -30px;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+header li {
+    list-style: none;
+}
+
+header #logo {
+    position: absolute;
+    width: var(--headerSize);
+    height: var(--headerSize);
+    left: 10px;
+    top: calc(var(--headerSize) / 4 - 8px);
+    z-index: 1;
+    cursor: pointer;
+}
+
+header #search {
+    width: 450px;
+    height: 50px;
+    background-color: var(--background);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+header #search input {
+    width: 385px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+header #search img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+header #account {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 15px;
+}
+
+header #account:hover {
+    opacity: .7;
+}
+
+header #menu.activated {
+    top: 70px;
+    height: calc(100dvh - 70px);
+    opacity: 1;
+}
+
+header #menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 70px;
+    overflow: hidden;
+    background-color: var(--purple);
+    border-radius: 0 0 10px 0;
+    transition: .3s;
+    opacity: .6;
+}
+
+header #menu #menuInfo.activated {
+    display: block;
+}
+
+header #menu #menuInfo {
+    display: none;
+    width: 150px;
+    text-align: right;
+    cursor: pointer;
+}
+
+main {
+    width: 100dvw;
+    height: calc(100dvh - var(--headerSize));
+    background-color: var(--background);
+}
