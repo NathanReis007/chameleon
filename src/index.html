@@ -17,7 +17,7 @@
                     <li id="logo" onclick="toggleMenu()">
                         <img src="./favicon.png" alt="Logo Chameleon Shop">
                     </li>
-                    <li class="search">
+                    <li class="search" onclick="toggleMenu(false)">
                         <input type="search" name="search" placeholder="Pesquisar">
                         <img src="./assets/icons/search.png" alt="search">
                     </li>
@@ -33,11 +33,14 @@
             </menu>
         </header>
 
-        <main>
-            <div class="search mobile">
+        <main onclick="toggleMenu(false)">
+            <div class="search mobile" onclick="toggleMenu(false)">
                 <input type="search" name="search" placeholder="Pesquisar">
                 <img src="./assets/icons/search.png" alt="search">
             </div>
+            <fieldset id="filtro">
+
+            </fieldset>
         </main>
     </div>
 </body>

@@ -28,6 +28,7 @@ h1,h2,h3,h4,h5,h6, p {
     width: 100dvw;
     height: 100dvh;
     background-color: var(--background);
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -109,9 +110,10 @@ header #account:hover {
 }
 
 header #menu.activated {
-    top: 70px;
-    height: calc(100dvh - 70px);
+    top: 75px;
+    height: calc(100dvh - 75px);
     background: linear-gradient(60deg, var(--pink), var(--primary) 70%);
+    box-shadow: 10px 0 20px #1d1d1134;
 }
 
 header #menu {
@@ -139,6 +141,7 @@ header #menu #menuInfo {
     display: none;
     width: 180px;
     text-align: right;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -243,6 +246,14 @@ main .search.mobile img {
     width: 35px;
     height: 35px;
     cursor: pointer;
+}
+
+main #filtro {
+    width: 100dvw;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px #1d1d1d25;
+    border: none;
 }
 
 @media(max-width: 630px) {
