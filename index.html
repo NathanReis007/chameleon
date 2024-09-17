@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chameleon Shop</title>
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <title>Chameleon Shop</title>
 </head>
 <body>
     <div class="container">
+
         <header>
             <nav>
                 <menu>
@@ -26,10 +28,11 @@
                     </li>
                 </menu>
             </nav>
-            <menu id="menu" class="activated">
-                <p id="menuInfo" onclick="toggleMenu()">MENU</p>
+            <menu id="menu">
+                <p id="menuInfo" onclick="toggleMenu()" class="activated">MENU</p>
             </menu>
         </header>
+
         <main>
             <div class="search mobile">
                 <input type="search" name="search" placeholder="Pesquisar">
@@ -37,15 +40,5 @@
             </div>
         </main>
     </div>
-
-    <script>
-        const $logo = document.querySelector("#logo");
-        const $menu = document.querySelector("#menu");
-        const $menuInfo = document.querySelector("#menuInfo");
-        const toggleMenu = () => {
-            $menu.classList.toggle("activated");
-            $menuInfo.classList.toggle("activated");
-        };
-    </script>
 </body>
 </html>

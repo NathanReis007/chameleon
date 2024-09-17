@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6, p {
 :root {
     --background: #eee;
     --primary: rgb(133,188,193);
-    --green: rgb(154,186,145);
+    --green: rgb(203, 250, 190);
     --pink: rgb(255, 175, 184);
     --purple: rgb(183,190,216); 
     --beige: rgb(245,229,216);
@@ -111,7 +111,7 @@ header #account:hover {
 header #menu.activated {
     top: 70px;
     height: calc(100dvh - 70px);
-    opacity: 1;
+    background: linear-gradient(60deg, var(--pink), var(--primary) 70%);
 }
 
 header #menu {
@@ -126,10 +126,9 @@ header #menu {
     width: 250px;
     height: 70px;
     overflow: hidden;
-    background-color: var(--purple);
+    background: linear-gradient(60deg, var(--pink), var(--primary));
     border-radius: 0 0 10px 0;
     transition: .3s;
-    opacity: .6;
 }
 
 header #menu #menuInfo.activated {
