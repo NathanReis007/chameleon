@@ -19,11 +19,16 @@
                     </li>
                     <li class="search" onclick="toggleMenu(false)">
                         <input type="search" name="search" placeholder="Pesquisar">
-                        <img src="./assets/icons/search.png" alt="search">
+                        <img src="./assets/icons/search.png" alt="Pesquisar">
+                    </li>
+                    <li id="btn-filtro">
+                        <a href="#">
+                            <img src="./assets/icons/sliders.svg" alt="Filtro">
+                        </a>
                     </li>
                     <li id="account">
                         <a href="#">
-                            <img src="./assets/icons/people-circle.svg" alt="account">
+                            <img src="./assets/icons/people-circle.svg" alt="Conta">
                         </a>
                     </li>
                 </menu>
@@ -32,7 +37,7 @@
                 <p id="menuInfo" onclick="toggleMenu()" class="activated">MENU</p>
                 <li id="account-mobile">
                     <a href="#">
-                        <img src="./assets/icons/people-circle.svg" alt="account">
+                        <img src="./assets/icons/people-circle.svg" alt="Conta">
                     </a>
                 </li>
             </menu>
@@ -40,6 +45,7 @@
 
         <main onclick="toggleMenu(false)">
             <fieldset id="filtro">
+                <legend>Filtros</legend>
 
             </fieldset>
             <div id="products">

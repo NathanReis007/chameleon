@@ -18,7 +18,7 @@ h1,h2,h3,h4,h5,h6, p {
     --pink: rgb(255, 175, 184);
     --purple: rgb(183,190,216); 
     --beige: rgb(245,229,216);
-    --orange: rgb(236,193,176);
+    --orange: #ecc1b0;
     --shadow: 0 10px 10px #1d1d1d1c;
 
     --headerSize: 70px;
@@ -60,11 +60,16 @@ header li {
     list-style: none;
 }
 
+header #logo.activated {
+    filter: grayscale(100%);
+}
+
 header #logo {
     position: absolute;
     width: var(--headerSize);
     height: var(--headerSize);
     left: 10px;
+    filter: grayscale(0%);
     top: calc(var(--headerSize) / 4 - 8px);
     z-index: 6;
     cursor: pointer;
@@ -106,7 +111,15 @@ header #account {
     top: 15px;
 }
 
-header #account:hover {
+header #btn-filtro {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 70px;
+    top: 15px;
+}
+
+header #account:hover, header #btn-filtro:hover {
     opacity: .7;
 }
 
@@ -148,8 +161,11 @@ header #menu #menuInfo.activated {
 
 header #menu #menuInfo {
     display: none;
-    width: 150px;
+    width: inherit;
+    height: inherit;
     text-align: right;
+    place-content: center;
+    margin-right: 20px;
     color: #fff;
     cursor: pointer;
 }
@@ -241,7 +257,7 @@ header #account-mobile:hover {
     }
 }
 
-@media(max-width: 315px) {
+@media(max-width: 350px) {
     header #menu #menuInfo, header #menu #menuInfo.activated, header #account {
         display: none;
     }
@@ -299,8 +315,15 @@ main #filtro {
     height: 100px;
     border-radius: 5px;
     box-shadow: var(--shadow);
-    border: none;
+    border: .8px dashed var(--pink);
+    margin: 50px 0 50px 0;
     z-index: 4;
+}
+
+main #filtro legend {
+    margin-left: 20px;
+    font-size: .9rem;
+    letter-spacing: 2px;
 }
 
 main #products {
@@ -332,10 +355,16 @@ main .product img {
     width: inherit;
 }
 
+main .product h1 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: .6px;
+}
+
 main .product p {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     gap: 10px;
 }
 
