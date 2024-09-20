@@ -12,41 +12,60 @@
     <div class="container">
 
         <header>
+
             <nav>
                 <menu>
                     <li id="logo" onclick="toggleMenu()">
                         <img src="./favicon.png" alt="Logo Chameleon Shop">
                     </li>
                     <li class="search" onclick="toggleMenu(false)">
-                        <input type="search" name="search" placeholder="Pesquisar">
+                        <input type="search" name="search" placeholder="Pesquisar" autocomplete="off">
                         <img src="./assets/icons/search.png" alt="Pesquisar">
                     </li>
-                    <li id="btn-filtro">
+                    <li id="btn-filtro" class="icon hoverOpacity" onclick="toggleFiltro()">
                         <a href="#">
                             <img src="./assets/icons/sliders.svg" alt="Filtro">
                         </a>
                     </li>
-                    <li id="account">
-                        <a href="#">
+                    <li id="account" class="icon">
+                        <a href="#" class="hoverOpacity" onclick="toggleMenuConta()">
                             <img src="./assets/icons/people-circle.svg" alt="Conta">
                         </a>
+                        <section id="menuConta">
+                            <ul>
+                                <li class="hoverOpacity">Minha Conta</li>
+                                <li class="hoverOpacity">Mudar de Conta</li>
+                                <li class="hoverOpacity">Meus Produtos</li>
+                                <li class="hoverOpacity">Configurações</li>
+                                <li id="logout" class="hoverOpacity">Sair</li>
+                            </ul>
+                        </section>
                     </li>
                 </menu>
             </nav>
+
             <menu id="menu">
                 <p id="menuInfo" onclick="toggleMenu()" class="activated">MENU</p>
-                <li id="account-mobile">
+                <li id="btn-filtro-mobile" class="icon hoverOpacity"  onclick="toggleFiltro(true)">
+                    <a href="#">
+                        <img src="./assets/icons/sliders.svg" alt="Filtro">
+                    </a>
+                </li>
+                <li id="account-mobile" class="icon hoverOpacity">
                     <a href="#">
                         <img src="./assets/icons/people-circle.svg" alt="Conta">
                     </a>
                 </li>
             </menu>
+
         </header>
 
-        <main onclick="toggleMenu(false)">
+        <main onclick="closeMenus()">
             <fieldset id="filtro">
                 <legend>Filtros</legend>
-
+                <button type="button" id="filtro-close" class="icon" onclick="toggleFiltro()">
+                    <img src="./assets/icons/x-circle-fill.svg" alt="Fechar">
+                </button>
             </fieldset>
             <div id="products">
                 <div class="product">
