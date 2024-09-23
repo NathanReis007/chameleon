@@ -1,0 +1,175 @@
+.container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    position: relative;
+    width: 700px;
+    min-height: 400px;
+    background: linear-gradient(23deg, #ffafb8ad, #cbfabe62,#85bcc1af);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@keyframes move {
+    0% {
+        border-radius: 2%;
+    }
+    30% {
+        border-radius: 14% 20% 16% 40%;
+    }
+    50% {
+        border-radius: 40% 4% 50% 36%;
+    }
+    70% {
+        border-radius: 4% 40% 36% 50%;
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
+
+form fieldset {
+    border: none;
+    background-color: #eee;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+form h1 {
+    text-align: center;
+    grid-column: span 2;
+    font-family: "Rowdies", sans-serif;
+    letter-spacing: 1.5px;
+    margin: 40px 0 0 0;
+}
+
+form fieldset input {
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 60px;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+form fieldset img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(60%);
+}
+
+form fieldset#professional-box {
+    grid-column: span 2;
+    background-color: transparent;
+    gap: 40px;
+}
+
+form fieldset input#professional {
+    width: 20px;
+}
+
+#eye {
+    cursor: pointer;
+}
+
+form a {
+    color: #082407;
+}
+
+form button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    transition: .2s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form button:disabled {
+    opacity: .9;
+    background-color: var(--pink);
+    color: tomato;
+    cursor: not-allowed;
+}
+
+.ball {
+    border-radius: 50%;
+}
+
+.ball-1 {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px; 
+    height: 300px; 
+    background-color: var(--primary);
+}
+
+.ball-2 {
+    position: absolute;
+    top: 20px;
+    left: calc(50dvw + 300px);
+    width: 200px; 
+    height: 200px; 
+    background-color: var(--orange);
+}
+
+.ball-3 {
+    position: absolute;
+    top: calc(50dvh + 150px);
+    left: calc(50dvw + 100px);
+    width: 150px; 
+    height: 150px; 
+    background: url(../../assets/chameleon/camaleao_real.jpeg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+}
+
+@media (max-width: 850px) {
+    form {
+        width: 100dvw;
+        height: 100dvh;
+    }
+
+    form {
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}
+
+@media (max-width: 600px) {  
+    form {
+        overflow: hidden auto;
+        grid-template-columns: 100dvw;
+        gap: 10px;
+    }
+
+    form h1 {
+        margin: 20px;
+    }
+
+    form h1, form fieldset#professional-box {
+        grid-column: auto;
+    }
+}

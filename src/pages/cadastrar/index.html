@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../../services/auth.js"></script>
+    <script defer src="./script.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+        <div class="ball ball-3"></div>
+
+        <form>
+            <h1>Chameleon Shop</h1>
+            <fieldset>
+                <input autocomplete="off" type="text" name="user" id="user" placeholder="Nome" required>
+                <img src="../../assets/icons/person.svg" alt="Nome">
+            </fieldset>
+            <fieldset>
+                <input autocomplete="off" type="email" name="email" id="email" placeholder="E-mail" required>
+                <img src="../../assets/icons/envelope.svg" alt="E-mail">
+            </fieldset>
+            <fieldset>
+                <input autocomplete="off" type="password" name="password" id="password" placeholder="Senha" required>
+                <img src="../../assets/icons/eye-slash.svg" alt="Usuário" id="eye">
+            </fieldset>
+            <fieldset>
+                <input autocomplete="off" type="password" name="password-confirm" id="password-confirm" placeholder="Cormirmar senha" required>
+                <img src="../../assets/icons/eye-slash.svg" alt="Usuário">
+            </fieldset>
+            <fieldset id="professional-box">
+                <input type="checkbox" name="professional" id="professional">
+                <label for="professional">Anunciante</label>
+            </fieldset>
+
+            <button type="button" onclick="backPage()">Voltar</button>
+            <button type="submit" disabled class="hoverOpacity" id="submit">ENTRAR</button>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,40 +1,3 @@
-/* GLOBAL */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6, p {
-    cursor: default;
-}
-
-:root {
-    --background: #eee;
-    --primary: #85bcc1;
-    --green: rgb(203, 250, 190);
-    --pink: rgb(255, 175, 184);
-    --purple: rgb(183,190,216); 
-    --beige: rgb(245,229,216);
-    --orange: #ecc1b0;
-    --shadow: 0 10px 10px #1d1d1d23;
-
-    --headerSize: 70px;
-}
-
-.container {
-    width: 100dvw;
-    height: 100dvh;
-    background-color: var(--background);
-    overflow: hidden;
-}
-
-.hoverOpacity:hover {
-    opacity: .7;
-}
-
 /* HEADER */
 
 header {
@@ -152,7 +115,7 @@ header #account section ul li {
     cursor: pointer;
 }
 
-header #account section ul li#logout {
+header #account section ul li.logout {
     color: #000000;
     text-align: right;
     font-weight: bold;
@@ -223,9 +186,24 @@ header #btn-filtro-mobile {
     filter: drop-shadow(var(--shadow))
 }
 
-header #account-mobile {
+section.account-mobile {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 180px;
+    background-color: var(--purple);
     display: none;
-    filter: drop-shadow(var(--shadow))
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    text-shadow: var(--shadow);
+}
+
+#menu li.noActivated, #menu section.noActivated {
+    display: none;
 }
 
 @media(max-width: 1000px) {
@@ -318,8 +296,8 @@ header #account-mobile {
         display: none;
     }
 
-    header #account-mobile {
-        display: block;
+    section.account-mobile {
+        display: flex;
     }
 
     header #menu.activated {

@@ -1,7 +1,8 @@
 const $logo = document.querySelector("#logo");
 const $menu = document.querySelector("#menu");
 const $menuInfo = document.querySelector("#menuInfo");
-const toggleMenu = (isToggle=true) => {
+const $menuMobileItens = document.querySelectorAll(".noActivated");
+const toggleMenu = (isToggle=true, elements) => {
     if(isToggle) {
         $menu.classList.toggle("activated");
         $menuInfo.classList.toggle("activated");
@@ -12,6 +13,15 @@ const toggleMenu = (isToggle=true) => {
         $menuInfo.classList.add("activated");
         $logo.classList.remove("activated");
     }
+
+    $menuMobileItens.forEach((menuItem) => {
+        if(isToggle) {
+            menuItem.classList.toggle("noActivated");
+        }
+        else {
+            menuItem.classList.add("noActivated");
+        }
+    });
 };
 
 const $filtro = document.querySelector("#filtro");
@@ -22,13 +32,13 @@ const toggleFiltro = (menu) => {
     }
 }
 
-const $menuConta = document.querySelector("#menuConta");
+const $menuConta = document.querySelectorAll(".menuConta");
 const toggleMenuConta = (isToggle=true) => {
     if(isToggle) {
-        $menuConta.classList.toggle("activated");
+        $menuConta.forEach((menu) => menu.classList.toggle("activated"));
     }
     else {
-        $menuConta.classList.remove("activated");
+        $menuConta.forEach((menu) => menu.classList.remove("activated"));
     }
 }
 
@@ -36,3 +46,9 @@ const closeMenus = () => {
     toggleMenu(false);
     toggleMenuConta(false);
 }
+
+const logout = () => {
+    Auth.logout();
+}
+
+Auth.verifyAuth();

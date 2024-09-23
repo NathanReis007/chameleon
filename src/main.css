@@ -1,0 +1,38 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');/* font-family: "Rowdies", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); /* font-family: "Roboto", sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+    cursor: default;
+}
+
+:root {
+    --background: #eee;
+    --primary: #85bcc1;
+    --green: #cbfabe;
+    --pink: #ffafb8;
+    --purple: #b7bed8; 
+    --beige: #f5e5d8;
+    --orange: #ecc1b0;
+    --shadow: 0 10px 10px #1d1d1d23;
+
+    --headerSize: 70px;
+}
+
+.container {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.hoverOpacity:hover {
+    opacity: .7;
+}

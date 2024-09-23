@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../../services/auth.js"></script>
+    <script defer src="./script.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+        <div class="ball ball-3"></div>
+
+        <form>
+            <img src="../../assets/chameleon/camaleao_real.jpeg" alt="Camaleão" id="chameleon">
+
+            <div class="box">
+                <h1>Chameleon Shop</h1>
+                <fieldset>
+                    <input autocomplete="off" type="text" name="user" id="user" placeholder="Usuário ou E-mail" required>
+                    <img src="../../assets/icons/person.svg" alt="Usuário">
+                </fieldset>
+                <fieldset>
+                    <input autocomplete="off" type="password" name="password" id="password" placeholder="Senha" required>
+                    <img src="../../assets/icons/eye-slash.svg" alt="Usuário" id="eye">
+                </fieldset>
+                <a href="#">Esqueceu a senha?</a>
+                <a href="../cadastrar/index.html">Cadastrar</a>
+                <button type="submit" disabled class="hoverOpacity" id="submit">ENTRAR</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

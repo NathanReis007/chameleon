@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./services/auth.js"></script>
     <script defer src="./script.js"></script>
     <title>Chameleon Shop</title>
 </head>
@@ -31,13 +33,13 @@
                         <a href="#" class="hoverOpacity" onclick="toggleMenuConta()">
                             <img src="./assets/icons/people-circle.svg" alt="Conta">
                         </a>
-                        <section id="menuConta">
+                        <section class="menuConta">
                             <ul>
                                 <li class="hoverOpacity">Minha Conta</li>
                                 <li class="hoverOpacity">Mudar de Conta</li>
                                 <li class="hoverOpacity">Meus Produtos</li>
                                 <li class="hoverOpacity">Configurações</li>
-                                <li id="logout" class="hoverOpacity">Sair</li>
+                                <li class="logout" class="hoverOpacity" onclick="logout()">Sair</li>
                             </ul>
                         </section>
                     </li>
@@ -46,16 +48,18 @@
 
             <menu id="menu">
                 <p id="menuInfo" onclick="toggleMenu()" class="activated">MENU</p>
-                <li id="btn-filtro-mobile" class="icon hoverOpacity"  onclick="toggleFiltro(true)">
+                <li id="btn-filtro-mobile" class="icon hoverOpacity noActivated"  onclick="toggleFiltro(true)">
                     <a href="#">
                         <img src="./assets/icons/sliders.svg" alt="Filtro">
                     </a>
                 </li>
-                <li id="account-mobile" class="icon hoverOpacity">
-                    <a href="#">
-                        <img src="./assets/icons/people-circle.svg" alt="Conta">
-                    </a>
-                </li>
+                <section class="account-mobile noActivated">
+                    <li class="hoverOpacity account-mobile">Minha Conta</li>
+                    <li class="hoverOpacity account-mobile">Mudar de Conta</li>
+                    <li class="hoverOpacity account-mobile">Meus Produtos</li>
+                    <li class="hoverOpacity account-mobile">Configurações</li>
+                    <li class="hoverOpacity account-mobile" onclick="logout()">Sair</li>
+                </section>
             </menu>
 
         </header>
