@@ -16,7 +16,9 @@ $form.oninput = () => {
 $form.onsubmit = (event) => {
     event.preventDefault();
     const formData = new FormData($form);
-    Auth.createUser(formData);
+    if(!Auth.createUser(formData).status) {
+        window.alert(Auth.createUser(formData).message);
+    }
 }
 
 const backPage = () => {

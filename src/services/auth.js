@@ -7,6 +7,8 @@ const Auth = {
             professional: !!formData.get("professional")
         };
 
+        if(createUser.password !== formData.get("password-confirm")) return { status: false, message: 'Senhas diferentes!' };
+
         const userLocal = localStorage.getItem("user");
 
         let users = [createUser];
