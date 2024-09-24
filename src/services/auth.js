@@ -26,7 +26,6 @@ const Auth = {
         if(!userLocal) return { status: false, message: 'Erro: Usuário não cadastrado!' };
         
         const result = JSON.parse(userLocal).find((u) => u.user === user && u.password === password || u.email === user && u.password === password);
-
         if(!!result) {
             localStorage.setItem("session", JSON.stringify({user: result.user, email: result.email}));
             window.location = "../../index.html";
@@ -45,7 +44,7 @@ const Auth = {
         const session = localStorage.getItem("session");
         if(loginPage) {
             if(session) {
-                this.login(JSON.parse(session).user, JSON.parse(session).email);
+                window.location = "../../index.html";
             }
         }
         else {
