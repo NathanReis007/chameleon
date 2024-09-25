@@ -54,7 +54,6 @@ form fieldset {
 form h1 {
     text-align: center;
     grid-column: span 2;
-    font-family: "Rowdies", sans-serif;
     letter-spacing: 1.5px;
     margin: 40px 0 0 0;
 }
