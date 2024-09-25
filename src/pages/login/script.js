@@ -21,7 +21,7 @@ $form.onsubmit = (event) => {
 
     const result = Auth.login(user, password);
     if(!result.status) {
-        window.alert(result.message)
+        openDialog.alert("ERRO", result.message);
     }
 }
 

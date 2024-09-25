@@ -17,7 +17,7 @@ $form.onsubmit = (event) => {
     event.preventDefault();
     const formData = new FormData($form);
     if(!Auth.createUser(formData).status) {
-        window.alert(Auth.createUser(formData).message);
+        openDialog.alert("ERRO", Auth.createUser(formData).message);
     }
 }
 
