@@ -24,5 +24,3 @@ $form.onsubmit = (event) => {
 const backPage = () => {
     location = "../login/index.html"
 }
-
-Auth.verifyAuth(true);

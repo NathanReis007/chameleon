@@ -37,20 +37,5 @@ const Auth = {
 
     logout() {
         localStorage.removeItem("session");
-        window.location = "./pages/login/index.html";
-    },
-
-    verifyAuth(loginPage=false) {
-        const session = localStorage.getItem("session");
-        if(loginPage) {
-            if(session) {
-                window.location = "../../index.html";
-            }
-        }
-        else {
-            if(!session) {
-                this.logout();
-            }
-        }
     }
 }

@@ -24,5 +24,3 @@ $form.onsubmit = (event) => {
         openDialog.alert("ERRO", result.message);
     }
 }
-
-Auth.verifyAuth(true);

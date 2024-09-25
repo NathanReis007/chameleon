@@ -48,7 +48,9 @@ const closeMenus = () => {
 }
 
 const logout = () => {
-    Auth.logout();
+    openDialog.confirm("Desconectar","Deseja realmente sair da sua conta?").then(response => {
+        if(response) {
+            Auth.logout();
+        }
+    });
 }
-
-Auth.verifyAuth();
