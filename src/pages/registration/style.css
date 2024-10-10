@@ -21,24 +21,6 @@ form {
     gap: 20px;
 }
 
-@keyframes move {
-    0% {
-        border-radius: 2%;
-    }
-    30% {
-        border-radius: 14% 20% 16% 40%;
-    }
-    50% {
-        border-radius: 40% 4% 50% 36%;
-    }
-    70% {
-        border-radius: 4% 40% 36% 50%;
-    }
-    100% {
-        border-radius: 50%;
-    }
-}
-
 form fieldset {
     border: none;
     background-color: #eee;
